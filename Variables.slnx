@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="addition/addition.csproj" Id="003f4234-23df-427b-a664-ea29b660d704" />
   <Project Path="HelloWorld/HelloWorld.csproj" />
   <Project Path="oddEven/oddEven.csproj" />
 </Solution>
