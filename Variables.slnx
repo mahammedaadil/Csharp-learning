@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="addition/addition.csproj" Id="003f4234-23df-427b-a664-ea29b660d704" />
+  <Project Path="ErrorTypes/ErrorTypes.csproj" Id="8ca0cdf9-1093-4965-ba39-f220228590b3" />
   <Project Path="HelloWorld/HelloWorld.csproj" />
   <Project Path="oddEven/oddEven.csproj" />
   <Project Path="WriteLineMethod/WriteLineMethod.csproj" Id="1488b141-86e1-40c4-9d7a-5a97d589bc3b" />
