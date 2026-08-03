@@ -18,3 +18,22 @@ Console.WriteLine("Name:Aadil\nAge:25");
 
 //backslash
 Console.WriteLine("Hello\\Patel\\Total");
+
+
+//single line comments example 
+
+
+//multi line comments
+/*
+Console.WriteLine("hello");
+Console.WriteLine("hello");
+Console.WriteLine("hello");
+Console.WriteLine("hello");
+
+*/
+
+//XML comments
+
+///<param> This is example </param >
+
+
