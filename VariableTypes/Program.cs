@@ -41,3 +41,6 @@ Console.WriteLine("hello" + g.ToString()); //explicitely convert by self
 //interpolation
 Console.WriteLine($"hello {g}");
 
+//constant vars
+const double PI = 3.14;
+Console.WriteLine($"pi value {PI}");

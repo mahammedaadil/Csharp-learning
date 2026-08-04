@@ -3,6 +3,7 @@
   <Project Path="ErrorTypes/ErrorTypes.csproj" Id="8ca0cdf9-1093-4965-ba39-f220228590b3" />
   <Project Path="HelloWorld/HelloWorld.csproj" />
   <Project Path="oddEven/oddEven.csproj" />
+  <Project Path="operators/operators.csproj" Id="278d1e7e-6c30-4ee8-a86c-2faf5bea33c9" />
   <Project Path="VariableTypes/VariableTypes.csproj" Id="11a9edef-7acd-469a-aad6-ae053367294a" />
   <Project Path="WriteLineMethod/WriteLineMethod.csproj" Id="1488b141-86e1-40c4-9d7a-5a97d589bc3b" />
 </Solution>
