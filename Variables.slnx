@@ -2,8 +2,10 @@
   <Project Path="addition/addition.csproj" Id="003f4234-23df-427b-a664-ea29b660d704" />
   <Project Path="ErrorTypes/ErrorTypes.csproj" Id="8ca0cdf9-1093-4965-ba39-f220228590b3" />
   <Project Path="HelloWorld/HelloWorld.csproj" />
+  <Project Path="IfBlocksAndSwitchStatement/IfBlocksAndSwitchStatement.csproj" Id="c64e4d1b-6190-4db6-b0e2-6b6cd194d9c0" />
   <Project Path="oddEven/oddEven.csproj" />
   <Project Path="operators/operators.csproj" Id="278d1e7e-6c30-4ee8-a86c-2faf5bea33c9" />
+  <Project Path="readlineWithTypeCasting/readlineWithTypeCasting.csproj" Id="f2f2e018-212a-4dc8-a650-fbc30b6f0e9b" />
   <Project Path="VariableTypes/VariableTypes.csproj" Id="11a9edef-7acd-469a-aad6-ae053367294a" />
   <Project Path="WriteLineMethod/WriteLineMethod.csproj" Id="1488b141-86e1-40c4-9d7a-5a97d589bc3b" />
 </Solution>
