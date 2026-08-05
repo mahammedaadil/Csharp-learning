@@ -14,3 +14,11 @@ for (int i = 0; i <= ex.Length; i++)
 {
     Console.WriteLine(ex[i]);
 } //print whole array  
+
+ 
+
+// for each loop
+foreach(int val in ex)
+{
+    Console.WriteLine(val);
+}
