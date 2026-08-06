@@ -23,3 +23,4 @@ for(int i = 0; i < nameList.Count; i++)
 }
 
 
+nameList.RemoveAt(0); //remove particular index

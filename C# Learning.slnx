@@ -3,6 +3,7 @@
   <Project Path="ArraysInC#/ArraysInC#.csproj" Id="f9187eb1-c9c7-4861-9c9e-f7fff91eb8e4" />
   <Project Path="BreakContinue/BreakContinue.csproj" Id="9febe583-b085-45eb-aa31-ddce64ada42a" />
   <Project Path="DateStruct/DateStruct.csproj" Id="5c9a9eb0-4bb2-4ced-bca3-006ae6ef3f24" />
+  <Project Path="DictionaryCollection/DictionaryCollection.csproj" Id="07022d17-80fd-407b-8d67-9ab1e6dbe9c7" />
   <Project Path="ErrorTypes/ErrorTypes.csproj" Id="8ca0cdf9-1093-4965-ba39-f220228590b3" />
   <Project Path="HelloWorld/HelloWorld.csproj" />
   <Project Path="IfBlocksAndSwitchStatement/IfBlocksAndSwitchStatement.csproj" Id="c64e4d1b-6190-4db6-b0e2-6b6cd194d9c0" />
