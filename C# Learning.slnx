@@ -7,6 +7,7 @@
   <Project Path="DateStruct/DateStruct.csproj" Id="5c9a9eb0-4bb2-4ced-bca3-006ae6ef3f24" />
   <Project Path="DictionaryCollection/DictionaryCollection.csproj" Id="07022d17-80fd-407b-8d67-9ab1e6dbe9c7" />
   <Project Path="ErrorTypes/ErrorTypes.csproj" Id="8ca0cdf9-1093-4965-ba39-f220228590b3" />
+  <Project Path="ExtensionClasses/ExtensionClasses.csproj" Id="f3861a3d-d717-420c-8a08-d309c921aaa6" />
   <Project Path="GenericMethodTypes/GenericMethodTypes.csproj" Id="e75bad42-1c46-4ca2-9a99-cb7b34e94923" />
   <Project Path="HelloWorld/HelloWorld.csproj" />
   <Project Path="IfBlocksAndSwitchStatement/IfBlocksAndSwitchStatement.csproj" Id="c64e4d1b-6190-4db6-b0e2-6b6cd194d9c0" />
