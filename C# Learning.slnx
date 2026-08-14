@@ -17,7 +17,7 @@
   <Project Path="Loops/Loops.csproj" Id="a5b06715-264a-4f99-9013-16555a268863" />
   <Project Path="MethodsInC#/MethodsInC#.csproj" Id="d52cfdbf-76cb-4c9d-bde2-3ad3b7bbd64a" />
   <Project Path="oddEven/oddEven.csproj" />
-  <Project Path="OneToManyObjRel/OneToManyObjRel.csproj" Id="3c632c47-6a51-46e8-b93a-c8e522e6e69c" />
+  <Project Path="OneToManyObjRel/OneToOneObjRel.csproj" Id="3c632c47-6a51-46e8-b93a-c8e522e6e69c" />
   <Project Path="operators/operators.csproj" Id="278d1e7e-6c30-4ee8-a86c-2faf5bea33c9" />
   <Project Path="RandomClass/RandomClass.csproj" Id="39c8efbe-e539-4e79-800a-72653fb8d9cb" />
   <Project Path="readlineWithTypeCasting/readlineWithTypeCasting.csproj" Id="f2f2e018-212a-4dc8-a650-fbc30b6f0e9b" />
