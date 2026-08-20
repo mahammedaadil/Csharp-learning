@@ -4,11 +4,14 @@ using SchoolSpace;
 using SubSpace;
 
 namespace GradeSystem
-{   
+{
     internal class Program
-    {  
-        List<double> graceEligibilityList = new List<double>(); 
-        public void SchoolInput(School schoolObj )
+    {
+        List<double> graceEligibilityList = new List<double>();
+        List<double> graceMarksList = new List<double>();
+        double maxGraceMarks = 10;
+        double totalGraceMarksCheck = 0;
+        public void SchoolInput(School schoolObj)
         {
             Console.WriteLine($"Welcome To {schoolObj.SchoolName}");
             Console.Write("Enter Your ClassName:");
@@ -19,7 +22,6 @@ namespace GradeSystem
             Console.Write("Enter Student Name:");
             studentObj.StudentName = Console.ReadLine();
         }
-
         public void MarksInput(Subjects subObj)
         {
             Console.Write("Enter Hindi Marks:");
@@ -61,20 +63,25 @@ namespace GradeSystem
                 return;
             }
             CheckGraceEligibility(subObj.Science);
-            Console.Clear();
-        }
 
+            Console.Clear();
+
+
+        }
         public void CheckGraceEligibility(double marks)
         {
             if (marks >= 25 && marks < 35)
             {
                 graceEligibilityList.Add(marks);
+                double requiredGrace = 35 - marks;
+                maxGraceMarks -= requiredGrace;
             }
+
         }
         public string GetGrade(double marks)
         {
             string grade = "";
-            if (marks>=90)
+            if (marks >= 90)
             {
                 grade = "A+";
             }
@@ -86,11 +93,11 @@ namespace GradeSystem
             {
                 grade = "B+";
             }
-            else if(marks >= 60)
+            else if (marks >= 60)
             {
                 grade = "B";
             }
-            else if(marks >= 50) 
+            else if (marks >= 50)
             {
                 grade = "C+";
             }
@@ -98,62 +105,66 @@ namespace GradeSystem
             {
                 grade = "C";
             }
-            else
+            else if(marks >= 35)
             {
                 grade = "E";
+            } else
+            {
+                grade = "F";
             }
             return grade;
         }
         public double GetGrace(double marks)
-        {  
+        {
             double passingMarks = 35;
             double minimumMarks = 25;
             double graceMarks = 0;
             int graceCount = graceEligibilityList.Count;
-            if (marks < 25)
+
+            if (marks < minimumMarks || graceCount > 2)
             {
                 return -1;
             }
-            if (marks >= minimumMarks && marks < passingMarks)
+            if (marks < passingMarks)
             {
-                if (graceCount != 2)
-                {
-                    return graceMarks = -1;
-                }
-                else
-                {
-                    return graceMarks = passingMarks - marks;
-                }
+                if (maxGraceMarks < 0) return -1;
+                graceMarks = passingMarks - marks;
+                graceMarksList.Add(graceMarks);
+                totalGraceMarksCheck += graceMarks;
+                return graceMarks;
             }
             return graceMarks;
         }
-        public string PrintWithGraceGrade(double checkMarks,string subName)
+        public string PrintWithGraceGrade(double checkMarks, string subName)
         {
-            double Grace = GetGrace(checkMarks);
-            string Grade = GetGrade(checkMarks);
+            double grace = GetGrace(checkMarks);
+            string grade = GetGrade(checkMarks+ grace);
 
-            if (Grace == -1)
+            if (grace == -1)
             {
-               return $"Sorry You Are Failed In {subName} Your Marks :{checkMarks} And Grade:{Grade}";
+                return $"Sorry You Are Failed In {subName} Your Marks :{checkMarks} And Grade:{grade}";
             }
-            else if (Grace == 0)
+            else if (grace == 0)
             {
-                return $"Your Marks In {subName} :{checkMarks} And Grade:{Grade}";
+                return $"Your Marks In {subName} :{checkMarks} And Grade:{grade}";
             }
             else
             {
-                return $"Your Marks In {subName}:{checkMarks} Grace Is:{Grace}  And Grade:{Grade}";
+                return $"Your Marks In {subName}:{checkMarks} Grace Is:{grace}  And Grade:{grade}";
             }
+
         }
+
         public void PrintDetails(School schoolObj, Student studentObj, Subjects subObj)
         {
             double totalMarks = 500;
-            string HindiMarks = PrintWithGraceGrade(subObj.Hindi,"Hindi");
-            string EnglishMarks = PrintWithGraceGrade(subObj.English,"English");
-            string MathsMarks = PrintWithGraceGrade(subObj.Maths,"Maths");
-            string ScienceMarks = PrintWithGraceGrade(subObj.Science,"Science");
-            string SocialMarks = PrintWithGraceGrade(subObj.SocialScience,"Social Science");
+            List<double> graceMarksWeHaveGiven = new List<double>();
 
+            string HindiMarks = PrintWithGraceGrade(subObj.Hindi, "Hindi");
+            string EnglishMarks = PrintWithGraceGrade(subObj.English, "English");
+            string MathsMarks = PrintWithGraceGrade(subObj.Maths, "Maths");
+            string ScienceMarks = PrintWithGraceGrade(subObj.Science, "Science");
+            string SocialMarks = PrintWithGraceGrade(subObj.SocialScience, "Social Science");
             Console.WriteLine($"Your School:{schoolObj.SchoolName}");
             Console.WriteLine($"Your ClassName:{schoolObj.ClassName}");
             Console.WriteLine($"Your Name Is:{studentObj.StudentName}");
@@ -167,6 +178,7 @@ namespace GradeSystem
         }
         static void Main(string[] args)
         {
+
             Program pgObj = new Program();
             School school = new School();
             Student student = new Student();
@@ -176,7 +188,7 @@ namespace GradeSystem
             pgObj.StudentInput(student);
             pgObj.MarksInput(sub);
             pgObj.PrintDetails(school, student, sub);
-           
+
         }
     }
 }
