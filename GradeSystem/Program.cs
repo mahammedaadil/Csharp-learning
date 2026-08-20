@@ -8,7 +8,6 @@ namespace GradeSystem
     internal class Program
     {
         List<double> graceEligibilityList = new List<double>();
-        List<double> graceMarksList = new List<double>();
         double maxGraceMarks = 10;
         double totalGraceMarksCheck = 0;
         public void SchoolInput(School schoolObj)
@@ -129,7 +128,6 @@ namespace GradeSystem
             {
                 if (maxGraceMarks < 0) return -1;
                 graceMarks = passingMarks - marks;
-                graceMarksList.Add(graceMarks);
                 totalGraceMarksCheck += graceMarks;
                 return graceMarks;
             }
@@ -176,6 +174,8 @@ namespace GradeSystem
             double totalObtainedMarks = subObj.Hindi + subObj.English + subObj.Maths + subObj.Science + subObj.SocialScience;
             Console.WriteLine($"Obtained Marks:{totalObtainedMarks}/{totalMarks}");
         }
+
+
         static void Main(string[] args)
         {
 
